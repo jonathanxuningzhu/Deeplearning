@@ -51,3 +51,7 @@ This agentic coding assistant follows this cycle:
 4. The agent frequently lost track of its initial goals.
 5. The agent struggles to call tools properly, often sending incorrect parameters.
 6. The agent doesn't know how to interpret tool outputs properly.
+
+# References
+1. Some of the projects are based on https://www.learnpytorch.io
+2. The simple coding agent is based on https://www.heyuan110.com/zh/posts/ai/2026-03-07-build-ai-agent-python/
