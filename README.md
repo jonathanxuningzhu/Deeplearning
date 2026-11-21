@@ -1,48 +1,53 @@
-# Deeplearning
+# Deep Learning
 
-Some Pytorch training projects and a simple agentic coding assistant.
+Some PyTorch training projects and a simple agentic coding assistant.
 
 # How LLMs Work
 
-The basic idea is that the nueral network predicts the next token but I havent trained one yet so I only have a broad concept in mind.
+The basic idea is that a neural network predicts the next token, but I haven't trained one yet, so I only have a broad concept in mind.
 
-# My Current Understandings on Nueral Networks
+# My Current Understanding of Neural Networks
 
-A nueral network is a combination of different layers and there are multiple neurons on each layer. Assuming that the network consists of linear layers, each nueron starts off with randomly assigned weights and biases and the nuerons calculates the output by multipling the input with the weight and than adding the bias. This output than becomes the input for the next layer so a deeplearning network is fundementally many matrix calculations. The final output is than compared with a desired value via a loss function and the weights and biases are than adjusted accordingly using a optimizer. This process is repeated for many epochs until the loss reaches a designated amount.
+A neural network is a combination of different layers, with multiple neurons in each layer. Assuming that the network consists of linear layers, each neuron starts off with randomly assigned weights and a bias. The neuron calculates its output by multiplying the inputs by their weights and then adding the bias. This output then becomes the input for the next layer, so a deep learning network fundamentally involves many matrix calculations. The final output is then compared with a desired value using a loss function, and the weights and biases are adjusted accordingly using an optimizer. This process is repeated for many epochs until the loss reaches a desired level.
 
-# Some of my trained nueral networks
+# Some of My Trained Neural Networks
 
-## Basic Nueral Network Workflows
-1. Prepare training and testing data
-2. Pick loss function and optimizer
-3. Build the training loop
-4. Make predictions using the model
-5. Evaluate the results
-6. Improving the model
+## Basic Neural Network Workflow
+
+1. Prepare training and testing data.
+2. Pick a loss function and optimizer.
+3. Build the training loop.
+4. Make predictions using the model.
+5. Evaluate the results.
+6. Improve the model.
 
 ## Linear Regression
-This nueral network only consists of a single nueron and one layer. Multiple dots are generated using the function y = 0.7x+0.3 and this data is split between a training set and testing set. The objective of this nueral network is to find out the relationship (weight and bias) between the x and y coordinates by interpreting the training data. 
 
-## Binary classification
-This nueral network is similar to the Linear regression one except that this one has multiple layers and multiple neurons on each layer. The trainning data is generated using a Circle Coordinate Plane formula but this data is generated twice. The objective of this nueral network is to classify the dots to see which circle they belong in. I also added 2 non-linear ReLU between the 3 linear layers to ensure that this model could find non-linear patterns.
+This neural network consists of a single neuron and one layer. Multiple dots are generated using the function y = 0.7x + 0.3, and this data is split into a training set and a testing set. The objective of this neural network is to find the relationship (weight and bias) between the x and y coordinates by learning from the training data.
 
-## Multi-class classification
-This model is similar to the Binary classification one but with more layers and more neurons on each layer to ensure that model could find the patterns.
+## Binary Classification
 
-# Agentic Coding Assistants (Simplified Version)
+This neural network is similar to the linear regression one, except that it has multiple layers and multiple neurons in each layer. The training data is generated as two circles on a coordinate plane. The objective of this neural network is to classify the dots according to which circle they belong to. I also added two non-linear ReLU functions between the three linear layers so that the model could find non-linear patterns.
 
-This Agentic coding assistant follows the following cycle
+## Multi-class Classification
 
-1. The user sends a prompt along with the system prompts to the agent.
-2. The agent thinks and than choose a tool from the lists which includes reading and writing files, terminal commands, searching code, etc...
-3. The context is updated everytime
-4. Once the agent did not make any tool calls the agentic cycle breaks.
-5. The agent would than spit out the results
+This model is similar to the binary classification one, but with more layers and more neurons in each layer so that the model could find the patterns.
 
-# Issues encountered
+# Agentic Coding Assistant (Simplified Version)
+
+This agentic coding assistant follows this cycle:
+
+1. The user sends a prompt to the agent, along with the system prompts.
+2. The agent thinks and then chooses a tool from the list, which includes tools for reading and writing files, running terminal commands, searching code, and so on.
+3. The context is updated each time.
+4. Once the agent stops making tool calls, the agentic cycle ends.
+5. The agent then outputs the results.
+
+# Issues Encountered
+
 1. Frequent tensor shape mismatches during training.
-2. Model doesnt find the pattern properly(underfitting)
-3. Adjustments to the learning rate, epochs, layers, neurons to achieve a lower loss.
-4. The Agent would frequently lost track of its initial goals.
-5. The Agent struggles to call the tools properly often sending incorrect parameters.
-6. The Agent doesnt know how to interpret the tool outputs properly.
+2. The model doesn't find the pattern properly (underfitting).
+3. Adjusting the learning rate, number of epochs, layers, and neurons to achieve a lower loss.
+4. The agent frequently lost track of its initial goals.
+5. The agent struggles to call tools properly, often sending incorrect parameters.
+6. The agent doesn't know how to interpret tool outputs properly.
